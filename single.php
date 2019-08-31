@@ -15,8 +15,11 @@ if(have_posts()){
 </div>
 <div style="height: 50px"></div>
 <div class="container">
-  <?php the_content(); ?>
-
+  <?php
+  the_content();
+  the_tags('<div class="tag-single">#','</div><div class="tag-single">#' , '</div>');
+  ?>
+  <div style="height: 50px"></div>
   <nav aria-label="Page navigation example">
    <ul class="pagination">
      <li class="page-item"><?php previous_post_link('%link', '<< Post Precedente'); ?></li>

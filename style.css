@@ -15,7 +15,6 @@ ________________________________*/
   min-height: 50vh;
   width: 100%;
   background: #6DA7FF;
-  /*background-image: url('./img/front-page-header.jpg');*/
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,10 +59,6 @@ ______________________________*/
   width: 100%;
   height: 100%;
 }
-/*.post-wrap .col-md-4{
-  padding: auto;
-  background: #bababa;
-}*/
 .post-wrap .btn:hover{
   background: #308AF5;
   color: #fff;
@@ -78,6 +73,30 @@ ______________________________*/
 }
 .cat-links a{color: #333}
 .cat-links{border: 1px solid #bababa;}
+.tag-single{
+  display: inline-block;
+  margin-right: 20px;
+  background: #bababa;
+  padding: 10px;
+  border-radius: 20px;
+}
+.tag-single a{color: #333;}
+/*______________________________
+        PAGE
+______________________________*/
+.wp-block-quote{
+  border-left: 10px solid #656363;
+  padding: 0 0 0 10px;
+}
+.wp-caption{}
+.wp-caption-text{}
+.alignright{}
+.alignleft{}
+.aligncenter{}
+.sticky{}
+.screen-reader-text{}
+.gallery-caption{}
+.bypostauthor{}
 /*______________________________
         WIDGET
 ______________________________*/
@@ -86,7 +105,6 @@ ______________________________*/
         COMMENTS
 ______________________________*/
 
-/*.comments-area{padding: 2rem;}*/
 .comment-list, .children{list-style-type: none}
 
 
