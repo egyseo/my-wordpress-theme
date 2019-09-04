@@ -13,7 +13,7 @@
         color: <?php echo"#".get_theme_mod( 'header_textcolor' ); ?>;
       }
       #header-widget-area p{
-        color: <?php echo get_theme_mod( 'my-custom-theme_headertext_color', '#ffffff' ); ?>;
+        color: <?php echo get_theme_mod( 'my-wordpress-theme_headertext_color', '#ffffff' ); ?>;
       }
     </style>
   </head>

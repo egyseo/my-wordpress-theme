@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 			<?php
 				printf( // WPCS: XSS OK.
 					/* translators: %d: number of comments. */
-					esc_html( _n( '%d commento', '%d commenti', get_comments_number(), 'my-custom-theme' ) ),
+					esc_html( _n( '%d commento', '%d commenti', get_comments_number(), 'my-wordpress-theme' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -40,8 +40,8 @@ if ( post_password_required() ) {
 
 		<?php
 		the_comments_navigation( array(
-			'next_text' => esc_html__( 'Newer Comments', 'my-custom-theme' ),
-			'prev_text' => esc_html__( 'Older Comments', 'my-custom-theme' ),
+			'next_text' => esc_html__( 'Newer Comments', 'my-wordpress-theme' ),
+			'prev_text' => esc_html__( 'Older Comments', 'my-wordpress-theme' ),
 		) ); ?>
 
 		<ul class="comment-list">
@@ -56,8 +56,8 @@ if ( post_password_required() ) {
 
 		<?php
 		the_comments_navigation( array(
-			'next_text' => esc_html__( 'Newer Comments', 'my-custom-theme' ),
-			'prev_text' => esc_html__( 'Older Comments', 'my-custom-theme' ),
+			'next_text' => esc_html__( 'Newer Comments', 'my-wordpress-theme' ),
+			'prev_text' => esc_html__( 'Older Comments', 'my-wordpress-theme' ),
 		) );
 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
@@ -72,24 +72,24 @@ if ( post_password_required() ) {
 	<?php if( comments_open() ) : ?>
 		<div class="wb-comment-form">
 			<?php
-				$wp_bootstrap_4_comment_field = '<div class="comment-form-textarea form-group col-md-12"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control" placeholder="'. esc_attr__('Inserisci il commento...*', 'wp-bootstrap-4') .'" required></textarea></div>';
+				$wp_bootstrap_4_comment_field = '<div class="comment-form-textarea form-group col-md-12"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control" placeholder="'. esc_attr__('Inserisci il commento...*', 'my-wordpress-theme') .'" required></textarea></div>';
 				$wp_bootstrap_4_fields =  array(
-				  'author' => '<div class="comment-form-author form-group col-md-4"><input id="author" placeholder="'. esc_attr__('Name *', 'wp-bootstrap-4') .'" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .'" size="30" class="form-control" required /></div>',
-				  'email'  => '<p class="comment-form-email form-group col-md-4"><input id="email" placeholder="'. esc_attr__('Email *', 'wp-bootstrap-4') .'" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .'" size="30" class="form-control" required /></p>',
-				  'url'    => '<p class="comment-form-url form-group col-md-4"><input id="url" placeholder="'. esc_attr__('Website', 'wp-bootstrap-4') .'" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .'" size="30" class="form-control" /></p>',
+				  'author' => '<div class="comment-form-author form-group col-md-4"><input id="author" placeholder="'. esc_attr__('Name *', 'my-wordpress-theme') .'" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .'" size="30" class="form-control" required /></div>',
+				  'email'  => '<p class="comment-form-email form-group col-md-4"><input id="email" placeholder="'. esc_attr__('Email *', 'my-wordpress-theme') .'" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) .'" size="30" class="form-control" required /></p>',
+				  'url'    => '<p class="comment-form-url form-group col-md-4"><input id="url" placeholder="'. esc_attr__('Website', 'my-wordpress-theme') .'" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .'" size="30" class="form-control" /></p>',
 				);
 
 				comment_form( array(
 					'title_reply_before'   => '<h5 class="reply-title">',
 					'title_reply_after'    => '</h5>',
-					'title_reply'          => esc_html__('Lascia un commento', 'my-custom-theme'),
-					'cancel_reply_link'    => esc_html__('Annulla', 'my-custom-theme'),
-					'label_submit'         => esc_html__('INVIA', 'my-custom-theme'),
+					'title_reply'          => esc_html__('Lascia un commento', 'my-wordpress-theme'),
+					'cancel_reply_link'    => esc_html__('Annulla', 'my-wordpress-theme'),
+					'label_submit'         => esc_html__('INVIA', 'my-wordpress-theme'),
 					'class_submit'         => 'submit btn btn-primary comment-submit-btn p-3',
 					'submit_field'         => '<div class="form-submit w-100">%1$s %2$s</div>',
 					'cancel_reply_before'  => '<small class="wb-cancel-reply">',
 					'class_form'           => 'comment-form row align-items-center',
-					'comment_notes_before' => '<div class="col-md-12 text-muted wb-comment-notes"><p>' . __( 'Il tuo indirizzo email non sarà pubblicato, I campi obbligatori sono contrassegnati con *', 'my-custom-theme' ) . '</p></div>',
+					'comment_notes_before' => '<div class="col-md-12 text-muted wb-comment-notes"><p>' . __( 'Il tuo indirizzo email non sarà pubblicato, I campi obbligatori sono contrassegnati con *', 'my-wordpress-theme' ) . '</p></div>',
 					'comment_notes_after'  => '',
 					'comment_field'        => $wp_bootstrap_4_comment_field,
 					'fields'               => $wp_bootstrap_4_fields,

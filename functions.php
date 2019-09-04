@@ -75,7 +75,7 @@ function wpb_widgets_init() {
     register_sidebar( array(
         'name' => 'Sidebar 1',
         'id' => 'sidebar-1',
-        'description' => 'Appears on the left of the page',
+        'description' => 'Appears on the right of the page',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h5 class="widget-title">',
@@ -88,6 +88,7 @@ function my_init(){
   add_theme_support('post-thumbnails');
   add_theme_support('title-tag');
   add_theme_support('menus');
+  add_theme_support( 'automatic-feed-links' );
   $header = array(
     'default-image' => get_template_directory_uri().'/assets/images/front-page-header.jpg',
     'default-text-color' => 'ffffff',
@@ -106,8 +107,8 @@ add_action('after_setup_theme', 'my_init');
 
 register_nav_menus(
   array(
-    'top-menu' => __('Top Menu', 'my-custom-theme'),
-    //'bottom-menu' => __('Bottom Menu', 'my-custom-theme')
+    'top-menu' => __('Top Menu', 'my-wordpress-theme'),
+    //'bottom-menu' => __('Bottom Menu', 'my-wordpress-theme')
   )
 );
 
@@ -137,14 +138,4 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 require get_template_directory() . '/inc/customizer.php';
 
-/*function add_menu_li_class(){
-  return array('nav-item');
-}
-
-add_filter('nav_menu_css_class', 'add_menu_li_class', 1, 3);
-
-function add_menuclass($ulclass) {
-   return preg_replace('/<a /', '<a class="nav-link active"', $ulclass);
-}
-add_filter('wp_nav_menu','add_menuclass');*/
 ?>
